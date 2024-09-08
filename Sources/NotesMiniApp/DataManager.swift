@@ -26,10 +26,9 @@ class DataManager {
         }
     }
     
-    func editNote(note: Note, newTitle: String, newText: String) {
+    func editNote(note: Note, newText: String) {
         do {
             try realm.write {
-                note.title = newTitle
                 note.text = newText
             }
         } catch {
